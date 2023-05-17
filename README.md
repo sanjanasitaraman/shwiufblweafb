@@ -16,7 +16,7 @@ If there was no pipe or redirection, I checked if it was a command I needed to h
 * tim: This command is a command I personally implemented that prints out "Tim is the best!" in cool ascii art. Just a silly command!
 
 ### Linux shell general commands
-If there was no pipe, redirection, and it was not a command I needed to handle seperately, I used fork and execvp to normally execute the command using the argument given. 
+If there was no pipe, redirection, and it was not a command I needed to handle seperately, I used fork and execvp to normally execute the command, using the argument given. 
 
 ## Video Presentation
 
