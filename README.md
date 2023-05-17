@@ -9,10 +9,10 @@ Next, I handeled the redirection of standard output (>). Similar to pipe, I kept
 
 ### Builtin commands
 If there was no pipe or redirection, I checked if it was a command I needed to handle separately. I created a seperate function called cmd_handler(), which exec_command() calls, to handle functions outside of the regular Linux shell. This function handles 4 different commands: "pwd", "cd", "help", and "tim".
-pwd: This bash command prints out the current working directory. I did this by using the function getcwd(), which takes in a buffer and the size of a buffer and prints out the path to the buffer. 
-cd: This bash command changes the current working directory to the specified location. I did this by using the function chdir(), which changes the current working directory to the input. 
-help: This bash command provides informatiobn on the shell's builtin commands. I call the function openHelp() which simply puts a string detailing the shell's functionality and what all can be done. 
-tim: This command is a command I personally implemented that prints out "Tim is the best!" in cool ascii art. Just a silly command!
+* pwd: This bash command prints out the current working directory. I did this by using the function getcwd(), which takes in a buffer and the size of a buffer and prints out the path to the buffer. 
+* cd: This bash command changes the current working directory to the specified location. I did this by using the function chdir(), which changes the current working directory to the input. 
+* help: This bash command provides informatiobn on the shell's builtin commands. I call the function openHelp() which simply puts a string detailing the shell's functionality and what all can be done. 
+* tim: This command is a command I personally implemented that prints out "Tim is the best!" in cool ascii art. Just a silly command!
 
 ### Linux shell general commands
 If there was no pipe, redirection, and it was not a command I needed to handle seperately, I used fork and execvp to normally execute the command using the argument given. 
