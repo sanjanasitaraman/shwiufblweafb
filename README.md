@@ -17,7 +17,10 @@ If there was no pipe or redirection, I checked if it was a command I needed to h
 If this function returns 1, then it successfully found the command. If it returns 0, the command was not found.
 
 ### Linux shell general commands
-If there was no pipe, redirection, and it was not a command I needed to handle seperately, I used fork and execvp to normally execute the command, using the argument given. 
+If there was no pipe, redirection, and it was not a command I needed to handle seperately, I used fork and execvp to normally execute the command, using the argument given.
+
+## Design Decesions
+I decided to implement piping and redirection similarily since they both required executing two sets of commands both before and after an operator. I chose to first check for piping and redirection first, since they would need to be handled the soonest. When checking for builtin commands, it was simpler if I created a seperate function cmd_handler() and passed in the argument (argv). This way I could also proceed depending on the output of that cmd_handler() and whether it was a success or a failure.
 
 ## Video Presentation
 
