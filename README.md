@@ -14,10 +14,10 @@ If there was no pipe or redirection, I checked if it was a command I needed to h
 * cd: This bash command changes the current working directory to the specified location. I did this by using the function chdir(), which changes the current working directory to the input. 
 * help: This bash command provides information on the shell's builtin commands. I call the function openHelp() which simply puts a string detailing the shell's functionality and what all can be done. 
 * tim: This command is a command I personally implemented that prints out "Tim is the best!" in cool ascii art. Just a silly command!
-If this function returns 1, then it successfully found the command. If it returns 0, the command was not found.
+If this function returns 1, then it successfully found the command. If it returns 0, the command was not found. If the command was successfully found, then I exit.
 
 ### Linux shell general commands
-If there was no pipe, redirection, and it was not a command I needed to handle separately, I used fork and execvp to normally execute the command, using the argument given.
+If there was no pipe, redirection, and it was not a command I needed to handle separately, I used execvp to normally execute the command, using the argument given.
 
 ## Design Decisions
 I decided to implement piping and redirection similarily  since they both required executing two sets of commands both before and after an operator. I chose to first check for piping and redirection first since they would need to be handled the soonest. When checking for builtin commands, it was simpler if I created a separate function cmd_handler() and passed in the argument (argv). This way I could also proceed depending on the output of that cmd_handler() and whether it was a success or a failure.
