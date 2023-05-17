@@ -17,9 +17,9 @@ tim: This command is a command I personally implemented that prints out "Tim is 
 ### Linux shell general commands
 If there was no pipe, redirection, and it was not a command I needed to handle seperately, I used fork and execvp to normally execute the command using the argument given. 
 
-## Video
+## Video Presentation
 
-## Sources
+## Resources Used
 https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html
 https://www.educative.io/blog/bash-shell-command-cheat-sheet
 https://www.geeksforgeeks.org/making-linux-shell-c/
